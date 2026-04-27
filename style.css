@@ -202,3 +202,143 @@ section{
 }
 
 /* --------- Estilo Sobre mí---------- */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--second-bg-color);
+}
+
+.about-img img{
+  width: 24vw;
+  border: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover {
+  box-shadow: 0 0 25px var(--main-color), 
+              0 0 50px var(--main-color), 
+              0 0 75px var(--main-color);
+}
+
+.about-content h2{
+  font-size: 6rem;
+  text-align: left;
+}
+
+.about-content p {
+  font-size: 1.8rem;
+  line-height: 1.8;  
+}
+
+/* --------- Estilo barra---------- */
+
+::-webkit-scrollbar{
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
+
+vebkit-scrollbar-track{
+  background-color: var(--bg-color);
+}
+
+/* --------- Estilo skills---------- */
+
+.titulo-s {
+  text-align: center;
+  font-size: 7rem;  
+  margin: 5rem 0;
+}
+
+
+.skills {
+  background-color: var(--bg-color);
+  color: black;
+}
+
+.skills h2{
+  color: var(--text-color);
+}
+
+.skills h3{
+  color: var(--text-color);
+  font-size: 3.2rem;
+  text-align: left;
+  margin-bottom: 5rem;
+  margin-top: 5rem;  
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  
+}
+
+.skills-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 200px;
+  width: 200px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+
+.skills-card:hover{
+  background-color: var(--second-bg-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+
+.skills-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;  
+}
+
+.skills-info h4 {
+  font-size: 2rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.skills-info i{
+  font-size: 7rem;
+}
+
+/* Responsive - 3 columns for tablets */
+@media (max-width: 1200px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive - 2 columns for mobile */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive - 1 column for very small screens */
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
