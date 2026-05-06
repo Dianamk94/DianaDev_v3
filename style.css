@@ -277,10 +277,11 @@ vebkit-scrollbar-track{
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   gap: 2.5rem;
-  
+  justify-items: center;
+  justify-content: center;
 }
 
 .skills-card {
@@ -322,23 +323,480 @@ vebkit-scrollbar-track{
   font-size: 7rem;
 }
 
-/* Responsive - 3 columns for tablets */
-@media (max-width: 1200px) {
+/* --------- Estilo Hobbies---------- */
+
+/* --------- Estilo Formación---------- */
+
+/* --------- Estilo Proyectos---------- */
+
+.projects {
+  background-color: var(--second-bg-color);
+}
+
+.titulo-proyectos {
+   text-align: center;
+  font-size: 7rem;  
+  margin: 5rem 0;
+}
+
+.projects-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  place-items: center;
+  gap: 3rem;
+  row-gap: 5rem;
+}
+
+.projects-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.03s ease;
+  height: 650px;
+}
+
+.projects-cards:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px var(--main-color), 
+              0 0 50px var(--main-color),               
+}
+
+.projects-cards img{
+  max-width: 300px;
+  border-radius: 2em;
+  object-fit: cover;
+}
+
+.projects-cards h3{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.projects-cards p{
+  font-size: 1.6rem;
+}
+
+.btn-repo{
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-repo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color), 
+              0 0 50px var(--main-color),               
+}
+
+.btn-demo{ 
+  display: inline-block;
+  padding: 1rem 3rem; 
+  background-color: black;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px transparent;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-demo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+  color: black;                 
+}
+
+/* --------- Estilo Contacto---------- */
+
+.contact{
+  background-color: var(--bg-color);
+}
+
+.contact h2{
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 7rem;  
+  margin: 5rem 0;
+  background: linear-gradient(
+    270deg,
+    #df8908 10%,
+    #FF1D15 100%    
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.contact form{
+  displey: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.contact form .input-box input, .contact form textarea{
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+
+/* --------- Footer---------- */
+.footer {
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+}
+
+.footer .social-icons{
+  text-align: center;
+}
+
+.footer ul{
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {  
+  border-bottom: 3px solid var(--main-color);
+}
+
+.footer .copyright{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;  
+}
+
+/* --------- Responsive Design ---------- */
+
+/* Escritorio grande */
+@media (min-width: 1025px) {
+  html {
+    font-size: 62.5%; /* Aumentar base para pantallas grandes */
+  }
+
+  .home-content h1 {
+    font-size: 8rem;
+  }
+
+  .home-content h3 {
+    font-size: 5rem;
+  }
+
+  .about-content h2 {
+    font-size: 7rem;
+  }
+
+  .titulo-s, .titulo-proyectos, .contact h2 {
+    font-size: 8rem;
+  }
+
   .skills-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .projects-box {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
 
-/* Responsive - 2 columns for mobile */
+/* Laptops */
+@media (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 3rem 10%;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    gap: 10rem;
+  }
+
+  .home-content {
+    text-align: right;
+  }
+
+  .home-content h1 {
+    font-size: 6rem;
+  }
+
+  .home-content h3 {
+    font-size: 3.5rem;
+  }
+
+  .home-img img {
+    width: 30vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+
+  .about-img img {
+    width: 25vw;
+  }
+
+  .about-content h2 {
+    font-size: 5rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .projects-box {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .contact form {
+    flex-direction: column;
+  }
+}
+
+/* --------------Tabletas------------- */
 @media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+    padding: 2rem 5%;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 0;
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+  .gradient-btn{
+    display: none;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+
+  .home-content{
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-content h3 {
+    font-size: 3rem;
+  }
+
+  .home-img img {
+    width: 40vw;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;    
+  }
+
+  .about-img img {
+    width: 30vw;
+  }
+
+  .about-content h2 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 4rem;
+  }
+
   .skills-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .skills-card {
+    height: 160px;
+    width: 160px;
+  }
+
+  .projects-cards {
+    height: 500px;
+    width: 600px;
+  }
+
+  .contact form {
+    flex-direction: column;
   }
 }
 
-/* Responsive - 1 column for very small screens */
+/* -----------------------Teléfonos---------------------- */
 @media (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .header {
+    padding: 1.5rem 5%;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  #menu-icon {
+    font-size: 3rem;
+  }
+
+  .navbar {
+    width: 150px;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.5rem;
+  }
+
+  .home-img img {
+    width: 40vw;
+  }
+
+  .about-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .about-content p {
+    font-size: 1.5rem;
+  }
+
+  .about-img img {
+    width: 35vw;
+  }
+
+  .titulo-s, .titulo-proyectos, .contact h2 {
+    font-size: 5rem;
+  }
+
   .skills-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .skills-card {
+    height: 150px;
+    width: 150px;
+  }
+
+  .skills-info h4 {
+    font-size: 1.8rem;
+  }
+
+  .skills-info i {
+    font-size: 5rem;
+  }
+
+  .projects-box {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .projects-cards {
+    height: 480px;
+    width: 300px;
+    padding: 3rem 1rem;
+  }
+
+  .projects-cards img {
+    max-width: 250px;
+  }
+
+  .projects-cards p {
+    font-size: 1.4rem;
+  }
+
+  .contact form .input-box input, .contact form textarea {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .footer ul li {
+    margin-left: 10px;
+  }
+
+  .footer .copyright {
+    font-size: 14px;
   }
 }
