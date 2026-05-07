@@ -9,7 +9,14 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+     <!-- CDN de CoreUI Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+
+
   </head>
+
   <body>
 
     <header class="header">
@@ -23,8 +30,8 @@
         <a href="#home">Home</a>
         <a href="#about">Sobre mí</a>
         <a href="#skills">Skills</a>
-        <a href="#Hobbies">Hobbies</a>
-        <a href="#Formacion">Formación</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#formacion">Formación</a>
         <a href="#projects">Proyectos</a>
         <!-- <a href="#contact">Contacto</a> -->
       </nav>
@@ -145,22 +152,22 @@
         </div>
 
         <div class="skills-card">
-          <div class="skills-info">
-            <i class="bx bxl-my-sql"></i>
+          <div class="skills-info">            
+             <i class="cib-mysql"></i>
             <h4>MySQL</h4>
           </div>
         </div>
 
         <div class="skills-card">
           <div class="skills-info">
-            <i class='bx bxl-phpmyadmin'></i>
+            <i class="bi bi-database"></i>
             <h4>phpMyAdmin</h4>
           </div>
         </div>
 
         <div class="skills-card">
           <div class="skills-info">
-            <i class='bx bxl-postman'></i>
+            <i class="cib-postman icon icon-xxl"></i>
             <h4>Postman</h4>
           </div>
         </div>       
@@ -181,21 +188,21 @@
 
          <div class="skills-card">
           <div class="skills-info">
-            <i class='bx bxl-photoshop'></i>
+            <i class="cib-adobe-photoshop"></i>
             <h4>Photoshop</h4>
           </div>
         </div>
 
         <div class="skills-card">
           <div class="skills-info">
-            <i class='bx bxl-illustrator'></i>
+            <i class="cib-adobe-illustrator"></i>
             <h4>Illustrator</h4>
           </div>
         </div>
 
         <div class="skills-card">
           <div class="skills-info">
-            <i class='bx bxl-3dsmax'></i>
+            <i class="cil-3d"></i>
             <h4>3ds Max</h4>
           </div>
         </div>
@@ -207,8 +214,108 @@
 
     <!-- ---------Hobbies---------- -->
 
+    <section class="hobbies" id="hobbies">
+
+      <h2 class="titulo-hobbie">Hobbies</h2>
+
+      <div class="hobbies-container">
+
+        <div class="hobbies-card">
+          <div class="hobbies-info">
+            <i class="bi bi-book"></i>
+            <h4>Leer</h4>
+          </div>
+        </div>
+
+        <div class="hobbies-card">
+          <div class="hobbies-info">
+            <i class="bi bi-controller"></i>
+            <h4>Video Juego</h4>
+          </div>
+        </div>
+
+        <div class="hobbies-card">
+          <div class="hobbies-info">
+            <i class="bi bi-scissors"></i>
+            <h4>Crochet</h4>
+          </div>
+        </div>
+
+        <div class="hobbies-card">
+          <div class="hobbies-info">
+            <i class="bi bi-headphones"></i>
+            <h4>Escuchar Música</h4>
+          </div>
+        </div>
+
+        <div class="hobbies-card">
+          <div class="hobbies-info">
+            <i class="bi bi-journal-bookmark-fill"></i>
+            <h4>Journaling</h4>
+          </div>
+        </div>
+
+        <div class="hobbies-card">
+          <div class="hobbies-info">
+            <i class="bi bi-palette"></i>
+            <h4>Pintar</h4>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
 
      <!-- ---------Formación---------- -->
+
+     <section class="formacion" id="formacion">
+
+      <h2 class="titulo-formacion">Formación Academica</h2>
+
+      <div class="formacion-conteiner">
+
+        <div class="formacion-card">
+          <div class="formacion-logo">
+          <img src="Imagenes/Sena_Logo.png" alt="imagen">
+          </div>
+          <div class="formacion-info">
+          <h4>Desarrollo Multimedia y Web</h4>
+          <p>2025 - Actualmente</p>
+          </div>
+        </div>
+
+        <div class="formacion-card">
+          <div class="formacion-logo">
+          <img src="Imagenes/GenerationLogo.png" alt="imagen">
+          </div>
+          <div class="formacion-info">
+          <h4>Desarrollador Full Stack</h4>
+          <p>2025</p>
+          </div>
+        </div>
+
+        <div class="formacion-card">
+          <div class="formacion-logo">
+          <img src="Imagenes/alura_logo.svg" alt="imagen">
+          </div>
+          <div class="formacion-info">
+          <h4>Programador Junior</h4>
+          <p>2023</p>
+          </div>
+        </div>
+
+        <div class="formacion-card">
+          <div class="formacion-logo">
+          <img src="Imagenes/UGC_logo.png" alt="imagen">
+          </div>
+          <div class="formacion-info">
+          <h4>Arquitecta</h4>
+          <p>2017</p>
+          </div>
+        </div>
+
+      </div>
+     </section>
 
 
       <!-- ---------Proyectos---------- -->
@@ -225,7 +332,7 @@
 
             <h3>HobbVerse</h3>
 
-            <p>Plataforma de comercio electrónico desarrollada como proyecto Full Stack, en la que se integraron tecnologías como Java y Spring Boot para la construcción del Back-End, y herramientas como Postman para la validación de endpoints. <br>En el Front-End se utilizaron HTML, CSS, JavaScript y Bootstrap.</p>
+            <p>Plataforma e-commerce desarrollada como proyecto Full Stack, integrando tecnologías como Java y Spring Boot para el Back-End, junto con HTML, CSS, JavaScript y Bootstrap en el Front-End. Además, se realizó validación de endpoints y pruebas mediante Postman.</p>
 
            <a href="https://github.com/Dianamk94/HobbVerse_F.git" class="btn-repo">Repositorio</a>
            <a href="https://hobb-verse-f.vercel.app/" class="btn-demo">Ver demo</a>      
@@ -239,12 +346,12 @@
 
            <img src="Imagenes/project2.png" alt="">
 
-           <h3>Proyecto 2</h3>
+           <h3>Barbería Alura</h3>
 
-           <p>Sitio web responsive para una barbería, usando HTML y CSS.</p>
+           <p>Sitio web responsive desarrollado para una barbería, enfocado en una experiencia visual moderna y adaptable a diferentes dispositivos, utilizando HTML y CSS.</p>
 
-           <a href="#" class="btn-repo">Repositorio</a>
-           <a href="#" class="btn-demo">Ver demo</a> 
+           <a href="https://github.com/Dianamk94/barberia-Alura.git" class="btn-repo">Repositorio</a>
+           <a href="https://dianamk94.github.io/barberia-Alura/" class="btn-demo">Ver demo</a> 
           
           </div>      
 
@@ -282,14 +389,14 @@
 
           <div class="projects-cards"> 
 
-            <img src="Imagenes/project5.png" alt="">
+            <img src="Imagenes/Proyecto_Encriptador.png" alt="Pagina web de encriptador de texto">
 
-             <h3>Proyecto 5</h3>
+             <h3>Encriptador de Texto</h3>
 
-             <p>Plataforma de comercio electrónico desarrollada como proyecto Full Stack, en la que se integraron tecnologías como Java y Spring Boot para la construcción del Back-End, y herramientas como Postman para la validación de endpoints. En el Front-End se utilizaron HTML, CSS, JavaScript y Bootstrap.</p>
+             <p>Aplicación web desarrollada con HTML, CSS y JavaScript que permite encriptar y desencriptar mensajes de texto de forma dinámica e intuitiva. Proyecto realizado como parte del Challenge de Oracle.</p>
 
-           <a href="#" class="btn-repo">Repositorio</a>
-           <a href="#" class="btn-demo">Ver demo</a> 
+           <a href="https://github.com/Dianamk94/Challenge-Encriptador-Alura.git" class="btn-repo">Repositorio</a>
+           <a href="https://dianamk94.github.io/Challenge-Encriptador-Alura/" class="btn-demo">Ver demo</a> 
           
           </div>       
 
@@ -299,9 +406,9 @@
 
             <img src="Imagenes/project6.png" alt="">
 
-            <h3>Proyecto 6</h3>
+            <h3>Visualización 3D y Marketing Arquitectónico</h3>
 
-            <p>Plataforma de comercio electrónico desarrollada como proyecto Full Stack, en la que se integraron tecnologías como Java y Spring Boot para la construcción del Back-End, y herramientas como Postman para la validación de endpoints. En el Front-End se utilizaron HTML, CSS, JavaScript y Bootstrap.</p>
+            <p>Plataforma de comercio electrónico desarrollada como proyecto Full Stack, en la que se integraron tecnologías como Java y Spring Boot para la construcción del Back-End, y herramientas como Postman para la validación de endpoints.</p>
 
            <a href="#" class="btn-repo">Repositorio</a>
            <a href="#" class="btn-demo">Ver demo</a> 
@@ -366,6 +473,10 @@
 
           <li>
             <a href="#skills">Skills</a>
+          </li>
+
+          <li>
+            <a href="#formacion">Formación</a>
           </li>
 
           <li>

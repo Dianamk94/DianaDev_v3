@@ -325,7 +325,138 @@ vebkit-scrollbar-track{
 
 /* --------- Estilo Hobbies---------- */
 
+.hobbies{
+  min-height: 40vh;
+  background-color: var(--second-bg-color);
+}
+
+.titulo-hobbie{
+   text-align: center;
+   font-size: 7rem;  
+   margin: 3rem 0;
+}
+
+.hobbies-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  gap: 2.5rem;
+  justify-items: center;
+  justify-content: center;
+}
+
+.hobbies-card{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: black;
+   color: var(--main-color);
+   height: 200px;
+   width: 200px;
+   border-radius: 3rem;
+   cursor: pointer;
+   border: 2px solid var(--main-color);
+   box-shadow: 0 0 25px transparent;
+   transition: 0.4s ease-in-out;
+}
+
+.hobbies-card:hover{
+  background-color: var(--main-color);
+  color: black;
+  border: none;
+  transform: scale(1.03);
+}
+
+.hobbies-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;  
+}
+
+.hobbies-info h4{
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.hobbies-info i{
+   font-size: 6rem;
+}
+
 /* --------- Estilo Formación---------- */
+
+.formacion{
+  min-height: 40vh;
+}
+
+.titulo-formacion{
+   text-align: center;
+   font-size: 7rem;  
+   margin: 5rem 0;
+}
+
+.formacion-conteiner{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  gap: 2.5rem;
+  justify-items: center;
+  justify-content: center;
+}
+
+.formacion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.03s ease;
+  height: 400px;
+  width: 320px;
+
+}
+
+.formacion-logo {  
+  border-radius: 50px;
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formacion-logo:hover{
+  transform: scale(1.03);
+  box-shadow: 0 0 25px var(--main-color), 
+              0 0 50px var(--main-color),
+}
+
+.formacion-logo img{
+  width: 120px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.formacion-info h4{ font-size: 1.8rem;
+  margin: 2rem 0;
+  font-weight: 800;
+  }
+
+  .formacion-info p{
+    font-size: 1.6rem;
+  }
+
 
 /* --------- Estilo Proyectos---------- */
 
@@ -424,7 +555,7 @@ vebkit-scrollbar-track{
   color: black;                 
 }
 
-/* --------- Estilo Contacto---------- */
+/* ------------------- Estilo Contacto------------------- */
 
 .contact{
   background-color: var(--bg-color);
@@ -445,8 +576,8 @@ vebkit-scrollbar-track{
 }
 
 .contact form{
-  displey: flex;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
   gap: 3rem;
   margin: 5rem 0;
@@ -465,7 +596,7 @@ vebkit-scrollbar-track{
   resize: none;
 }
 
-/* --------- Footer---------- */
+/* -------------------- Footer----------------------- */
 .footer {
   background-color: var(--second-bg-color);
   padding: 50px 0;
@@ -501,9 +632,9 @@ vebkit-scrollbar-track{
   font-size: 16px;  
 }
 
-/* --------- Responsive Design ---------- */
+/* ------------------ Responsive Design ---------------------- */
 
-/* Escritorio grande */
+/* ------------------ Escritorio grande ------------------------ */
 @media (min-width: 1025px) {
   html {
     font-size: 62.5%; /* Aumentar base para pantallas grandes */
@@ -586,16 +717,21 @@ vebkit-scrollbar-track{
     justify-content: center;
   }
 
+  .formacion-conteiner {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
   .projects-box {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 
   .contact form {
     flex-direction: column;
+    align-items: center;
   }
 }
 
-/* --------------Tabletas------------- */
+/* --------------------Tabletas--------------------- */
 @media (max-width: 768px) {
   html {
     font-size: 50%;
@@ -685,6 +821,38 @@ vebkit-scrollbar-track{
     width: 160px;
   }
 
+  .titulo-formacion {
+    font-size: 6rem;
+  }
+
+  .formacion-conteiner {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .formacion-card {
+    height: 350px;
+    width: 280px;
+    padding: 3rem 1.5rem;
+  }
+
+  .formacion-logo {
+    height: 200px;
+    width: 200px;
+  }
+
+  .formacion-logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .formacion-info h4 {
+    font-size: 1.6rem;
+  }
+
+  .formacion-info p {
+    font-size: 1.4rem;
+  }
+
   .projects-cards {
     height: 500px;
     width: 600px;
@@ -692,6 +860,7 @@ vebkit-scrollbar-track{
 
   .contact form {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -745,7 +914,7 @@ vebkit-scrollbar-track{
     width: 35vw;
   }
 
-  .titulo-s, .titulo-proyectos, .contact h2 {
+  .titulo-s, .titulo-proyectos, .titulo-formacion, .contact h2 {
     font-size: 5rem;
   }
 
@@ -768,9 +937,37 @@ vebkit-scrollbar-track{
     font-size: 5rem;
   }
 
+  .formacion-conteiner {
+    grid-template-columns: 1fr;
+  }
+
+  .formacion-card {
+    height: 300px;
+    width: 250px;
+    padding: 2rem 1rem;
+  }
+
+  .formacion-logo {
+    height: 150px;
+    width: 150px;
+  }
+
+  .formacion-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .formacion-info h4 {
+    font-size: 1.4rem;
+  }
+
+  .formacion-info p {
+    font-size: 1.2rem;
+  }
+
   .projects-box {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2rem;    
   }
 
   .projects-cards {
